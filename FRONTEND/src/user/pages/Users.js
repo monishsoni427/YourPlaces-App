@@ -10,7 +10,7 @@ const Users = () => {
     const fetchUsers = async () => {
       try {
         const responseData = await sendRequest(
-          "http://localhost:5000/api/users/",
+          "https://your-places-back.vercel.app/api/users/",
           "GET"
         );
         setIsLoadedUsers(responseData.users);
