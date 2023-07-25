@@ -32,7 +32,7 @@ const PlaceItem = (props) => {
     setShowConfirmModal(false);
     try {
       await sendRequest(
-        `your-places-back.vercel.app/api/places/${props.id}`,
+        `http://localhost:5000/api/places/${props.id}`,
         "DELETE"
       );
       props.onDelete(props.id);
@@ -82,7 +82,7 @@ const PlaceItem = (props) => {
           {isLoading && <LoadingSpinner asOverlay />}
           <div className="place-item__image">
             <img
-              src={`your-places-back.vercel.app/${props.image}`}
+              src={`http://localhost:5000/${props.image}`}
               alt={props.title}
             />
           </div>
