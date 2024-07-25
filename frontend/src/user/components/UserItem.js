@@ -10,7 +10,7 @@ const UserItem = (props) => {
         <Link to={`/${props.id}/places`}>
           <div className="user-item__image">
             <Avatar
-              image={`https://your-places-app-758t.vercel.app/${props.image}`}
+              image={`https://your-places-app-backend.vercel.app/${props.image}`}
               alt={props.name}
             />
           </div>
