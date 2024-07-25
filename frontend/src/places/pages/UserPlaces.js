@@ -16,7 +16,7 @@ const UserPlaces = () => {
     const fetchPlaces = async () => {
       try {
         const responseData = await sendRequest(
-          `http://localhost:5000/api/places/user/${userId}`,
+          `https://your-places-app-758t.vercel.app/api/places/user/${userId}`,
           "GET"
         );
         setLoadedPlaces(responseData.places);
