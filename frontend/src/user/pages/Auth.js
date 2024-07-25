@@ -70,7 +70,7 @@ const Auth = () => {
     if (isLoginMode) {
       try {
         const responseData = await sendRequest(
-          "https://your-places-app-758t.vercel.app/api/users/login",
+          "https://your-places-app-backend.vercel.app/api/users/login",
           "POST",
           JSON.stringify({
             email: formState.inputs.email.value,
@@ -91,7 +91,7 @@ const Auth = () => {
         formData.append("image", formState.inputs.image.value);
 
         const responseData = await sendRequest(
-          "https://your-places-app-758t.vercel.app/api/users/signup",
+          "https://your-places-app-backend.vercel.app/api/users/signup",
           "POST",
           formData
         );
