@@ -82,7 +82,7 @@ const PlaceItem = (props) => {
           {isLoading && <LoadingSpinner asOverlay />}
           <div className="place-item__image">
             <img
-              src={`http://localhost:5000/${props.image}`}
+              src={`https://your-places-app-backend.vercel.app/${props.image}`}
               alt={props.title}
             />
           </div>
