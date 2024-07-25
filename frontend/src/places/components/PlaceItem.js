@@ -32,7 +32,7 @@ const PlaceItem = (props) => {
     setShowConfirmModal(false);
     try {
       await sendRequest(
-        `https://your-places-app-758t.vercel.app/api/places/${props.id}`,
+        `https://your-places-app-backend.vercel.app/api/places/${props.id}`,
         "DELETE"
       );
       props.onDelete(props.id);
