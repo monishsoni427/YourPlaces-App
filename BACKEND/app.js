@@ -7,7 +7,7 @@ const mongoose = require("mongoose");
 const placesRoutes = require("./routes/places-routes");
 const usersRoutes = require("./routes/users-routes");
 const HttpError = require("./models/http-error");
-
+const port = 5000;
 const app = express();
 
 app.use(bodyParser.json());
@@ -53,7 +53,9 @@ mongoose
     { useNewUrlParser: true, useUnifiedTopology: true }
   )
   .then(() => {
-    app.listen(5000);
+    app.listen(port, () => {
+      console.log(`server is listening on port ${port}`);
+    });
   })
   .catch((err) => {
     console.log(err);
